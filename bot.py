@@ -139,6 +139,7 @@ async def addemblema(ctx, cod, nome, desc, _url=None):
     embed.add_field(name="Código: ", value=cod, inline=False)
     embed.add_field(name="Título: ", value=nome, inline=False)
     embed.add_field(name="Descrição: ", value=desc, inline=False)
+    os.remove(os.path.join("temp", cod + '.gif'))
     await ctx.message.channel.send(embed=embed)
 
 @bot.command()
@@ -272,6 +273,7 @@ async def movercategoria(ctx, *args):
         return await ctx.message.channel.send(f"Parâmetros Inválidos D;")
 
 
+@commands.check_any(is_admin(), is_furni_user(), is_furni_user())
 @bot.command()
 async def comandos(ctx):
     embed = discord.Embed(title="Comandos: ")
@@ -286,6 +288,10 @@ async def comandos(ctx):
                     value="Move a primeira categoria escolhida para dentro da segunda categoria escolhida", inline=False)
     embed.add_field(name="!daremblema jogador codigo",
                     value="Da o emblema escolhido ao jogador. (precisa relogar pra aparecer)", inline=False)
+    embed.add_field(name="!daremblemas codigo jogador1 jogador2 etc",
+                    value="Da o emblema escolhido aos jogadores selecionados. (precisa relogar pra aparecer)", inline=False)
+    embed.add_field(name="!pagarpromo codigo jogador1 jogador2 etc",
+                    value="Da o emblema escolhido e 1 age coin aos jogadores selecionados. (precisa relogar pra aparecer)", inline=False)
     embed.add_field(name="!addcores hex_da_cor1 hex_da_cor_2",
                     value="Adiciona as cores escolhidas a aba cores de nome vip", inline=False)
     embed.add_field(name="!mobiemblema catalog_id codigo",
