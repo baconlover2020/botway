@@ -153,7 +153,7 @@ async def daremblema(ctx, nome, emblema):
 
 @bot.command()
 @commands.check_any(is_admin(), is_badge_user())
-async def daremblemas(ctx, *, args):
+async def pagarpromo(ctx, *, args):
     painel.check_login()
     try:
         emblema = args.split(' ')[0]
@@ -165,6 +165,26 @@ async def daremblemas(ctx, *, args):
             painel.dar_promo_points(nome, "1")
             nomes.append(nome)
         embed = discord.Embed(title="Emblema e 1 promo point enviado aos jogadores: ")
+        for nome in nomes:
+            embed.add_field(name=f"{nome}: ", value=emblema)
+        await ctx.message.channel.send(embed=embed)
+    except Exception as e:
+        print(e)
+
+
+@bot.command()
+@commands.check_any(is_admin(), is_badge_user())
+async def daremblemas(ctx, *, args):
+    painel.check_login()
+    try:
+        args = args.split(' ')
+        emblema = args[0]
+        args = args[1:]
+        nomes = []
+        for nome in args:
+            painel.dar_emblema(nome.strip(' '), emblema)
+            nomes.append(nome)
+        embed = discord.Embed(title=f"Emblema {emblema} enviado aos users:")
         for nome in nomes:
             embed.add_field(name=f"{nome}: ", value=emblema)
         await ctx.message.channel.send(embed=embed)
