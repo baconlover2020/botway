@@ -61,7 +61,7 @@ async def addcategoria(ctx):
         os.remove(os.path.join(temp, categoria))
     if categoria.endswith(".rar"):
         await ctx.message.channel.send(f"Descompactando: {categoria}")
-        os.system(f"unar -f -o /home/ec2-user/Git/AgeCommands_v1/{temp} {os.path.join(temp, categoria)}")
+        os.system(f"unar -f -o /home/maths_menezes/botway/botway/{temp} {os.path.join(temp, categoria)}")
         os.remove(os.path.join(temp, categoria))
     categoria = categoria.strip('.rar').strip('.zip').replace('_', ' ')
     for pasta in os.listdir("temp"):
