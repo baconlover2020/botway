@@ -13,12 +13,12 @@ async def upload_gif(color1, color2=''):
     cores.save(f"temp/{color1}.gif")
     return f"temp/{color1}.gif"
 
-async def hospedar_cor(nome, color1, color2=''):
+async def hospedar_cor(nome, color1, color2='', message=None):
     if color2=='':
         badge_id = color1
     else:
         badge_id = f"{color1},{color2}"
-    await painel.adicionar_icon(f"temp/{color1}.gif")
-    await painel.adicionar_catalogo('2424000', '-1', nome, cost_diamonds='999999', extradata='name_colour', badge_id=badge_id)
+    await painel.adicionar_gif(f"temp/{color1}.gif", message=message)
+    await painel.adicionar_catalogo('2424000', '-1', nome, cost_diamonds='999999', extradata='name_colour', badge_id=badge_id, message=message)
 
 

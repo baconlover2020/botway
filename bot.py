@@ -61,7 +61,7 @@ async def addcategoria(ctx):
         os.remove(os.path.join(temp, categoria))
     if categoria.endswith(".rar"):
         await ctx.message.channel.send(f"Descompactando: {categoria}")
-        os.system(f"unar -f -o /home/ec2-user/Git/AgeCommands_v1/{temp} {os.path.join(temp, categoria)}")
+        os.system(f"unar -f -o /home/maths_menezes/botway/botway/{temp} {os.path.join(temp, categoria)}")
         os.remove(os.path.join(temp, categoria))
     categoria = categoria.strip('.rar').strip('.zip').replace('_', ' ')
     for pasta in os.listdir("temp"):
@@ -98,7 +98,7 @@ async def addcores(ctx, nome, cor1, cor2=''):
     cor1 = cor1.replace('#', '')
     cor2 = cor2.replace('#', '')
     icon_path = await adicionar_cor.upload_gif(cor1, cor2)
-    await adicionar_cor.hospedar_cor(nome, cor1, cor2)
+    await adicionar_cor.hospedar_cor(nome, cor1, cor2, message=ctx.message)
     _file = discord.File(icon_path)
     embed = discord.Embed(title='Cor(es) adicionada(s): ')
     embed.add_field(name='Nome:', value=nome, inline=False)
