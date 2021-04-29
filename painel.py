@@ -299,7 +299,7 @@ with requests.Session() as session:
 
     async def adicionar_gif(path, message=None):
         files = {'userfile[]': open(path, "rb")}
-        print(session.post('http://setoradministrativo.agehotel.info/salvar_emblem.php', files=files).content)
+        session.post('http://setoradministrativo.agehotel.info/salvar_emblem.php', files=files)
         return await message.channel.send(f"{path.split('/')[-1]} foi hospedado.")
 
 
