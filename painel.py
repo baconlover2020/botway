@@ -3,8 +3,7 @@ import os
 import discord
 import urllib.parse
 import shutil
-from variables import auth_data, pin
-from tests import auth
+from variables import auth
 import scraping
 
 
