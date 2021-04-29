@@ -203,14 +203,14 @@ with requests.Session() as session:
         print('Todos os mobis foram adicionados ao furniture')
 
 
-    async def adicionar_catalogo(page_id, item_id='', catalog_name='', cost_credits='5', amount='1', song_id='0',
+    async def adicionar_catalogo(page_id, item_id='', catalog_name='', cost_credits='5', cost_pixels='0', amount='1', song_id='0',
                            limited_sells='0', extradata='', badge_id='', cost_diamonds='99999999', message=None):
         catalogo = {'page_id[]': page_id,
                     'item_ids[]': item_id,
                     'catalog_name[]': catalog_name,
                     'cost_credits[]': cost_credits,
                     'cost_snow[]': '0',
-                    'cost_pixels[]': '0',
+                    'cost_pixels[]': cost_pixels,
                     'amount[]': amount,
                     'vip[]': '0',
                     'achievement[]': '0',

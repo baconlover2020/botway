@@ -19,6 +19,6 @@ async def hospedar_cor(nome, color1, color2='', message=None):
     else:
         badge_id = f"{color1},{color2}"
     await painel.adicionar_gif(f"temp/{color1}.gif", message=message)
-    await painel.adicionar_catalogo('2424000', '-1', nome, cost_diamonds='999999', extradata='name_colour', badge_id=badge_id, message=message)
+    await painel.adicionar_catalogo('2424000', '-1', nome, cost_credits='0' ,cost_pixels= '200', cost_diamonds='0', extradata='name_colour', badge_id=badge_id, message=message)
 
 
