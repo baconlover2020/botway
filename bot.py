@@ -6,27 +6,25 @@ import painel
 from scraping import get_online_staffs
 import adicionar_cor
 import furni_search
-from variables import user, furni_users, badge_users, admins, bot_token
+from variables import bot_token, users
 
-token = bot_token
 bot = commands.Bot(command_prefix='!')
 temp = 'temp'
-can_add_badge_role = 'AgeBot Emblemas'
-can_add_furni_role = 'AgeBot Mobis'
 
-def is_furni_user():
+
+def can_add_furni():
     def predicate(ctx):
-        for furni_user in furni_users:
-            if user[furni_user] == ctx.message.author.id:
+        for user in users:
+            if user.id == ctx.message.author.id and user.can_add_furni():
                 return True
         return False
     return commands.check(predicate)
 
 
-def is_badge_user():
+def can_add_badge():
     def predicate(ctx):
-        for badge_user in badge_users:
-            if user[badge_user] == ctx.message.author.id:
+        for user in users:
+            if user.id == ctx.message.author.id and user.can_add_badge:
                 return True
         return False
     return commands.check(predicate)
@@ -34,8 +32,8 @@ def is_badge_user():
 
 def is_admin():
     def predicate(ctx):
-        for admin in admins:
-            if user[admin] == ctx.message.author.id:
+        for user in users:
+            if user.id == ctx.message.author.id and user.is_admin:
                 return True
         return False
     return commands.check(predicate)
@@ -48,7 +46,7 @@ async def on_ready():
 
 
 @bot.command()
-@commands.check_any(is_admin(), is_furni_user())
+@commands.check_any(is_admin(), can_add_furni())
 async def addcategoria(ctx):
     painel.check_login()
     for attachment in ctx.message.attachments:
@@ -81,7 +79,7 @@ async def addcategoria(ctx):
 
 
 @bot.command()
-@commands.check_any(is_admin(), is_furni_user())
+@commands.check_any(is_admin(), can_add_furni())
 async def addcatalogicon(ctx):
     painel.check_login()
     _id = painel.get_icon_id()
@@ -108,7 +106,7 @@ async def addcores(ctx, nome, cor1, cor2=''):
     await ctx.message.channel.send(file=_file, embed=embed)
 
 @bot.command()
-@commands.check_any(is_admin(), is_furni_user())
+@commands.check_any(is_admin(), can_add_furni())
 async def novoicone(ctx, *, categoria):
     painel.check_login()
     print(f"Buscando {categoria}")
@@ -124,7 +122,7 @@ async def novoicone(ctx, *, categoria):
 
 
 @bot.command()
-@commands.check_any(is_admin(), is_badge_user())
+@commands.check_any(is_admin(), can_add_badge())
 async def addemblema(ctx, cod, nome, desc, _url=None):
     painel.check_login()
     if len(ctx.message.attachments) > 0:
@@ -143,7 +141,7 @@ async def addemblema(ctx, cod, nome, desc, _url=None):
     await ctx.message.channel.send(embed=embed)
 
 @bot.command()
-@commands.check_any(is_admin(), is_badge_user())
+@commands.check_any(is_admin(), can_add_badge())
 async def daremblema(ctx, nome, emblema):
     painel.check_login()
     nome, emblema = painel.dar_emblema(nome, emblema)
@@ -153,7 +151,7 @@ async def daremblema(ctx, nome, emblema):
     await ctx.message.channel.send(embed=embed)
 
 @bot.command()
-@commands.check_any(is_admin(), is_badge_user())
+@commands.check_any(is_admin(), can_add_badge())
 async def pagarpromo(ctx, *, args):
     painel.check_login()
     try:
@@ -174,7 +172,7 @@ async def pagarpromo(ctx, *, args):
 
 
 @bot.command()
-@commands.check_any(is_admin(), is_badge_user())
+@commands.check_any(is_admin(), can_add_badge())
 async def daremblemas(ctx, *, args):
     painel.check_login()
     try:
@@ -253,7 +251,7 @@ async def staffinfo(ctx):
 
 
 @bot.command()
-@commands.check_any(is_admin(), is_furni_user())
+@commands.check_any(is_admin(), can_add_furni())
 async def movercategoria(ctx, *args):
     painel.check_login()
     if len(args) == 2:
@@ -273,7 +271,7 @@ async def movercategoria(ctx, *args):
         return await ctx.message.channel.send(f"Parâmetros Inválidos D;")
 
 
-@commands.check_any(is_admin(), is_furni_user(), is_furni_user())
+@commands.check_any(is_admin(), can_add_furni())
 @bot.command()
 async def comandos(ctx):
     embed = discord.Embed(title="Comandos: ")
@@ -311,4 +309,4 @@ def verificar_coerencia(categoria, pasta):
     else:
         return False
 
-bot.run(token)
+bot.run(bot_token)

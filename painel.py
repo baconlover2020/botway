@@ -4,6 +4,7 @@ import discord
 import urllib.parse
 import shutil
 from variables import auth_data, pin
+from tests import auth
 import scraping
 
 
@@ -42,9 +43,9 @@ def get_classname(swf_path):
 with requests.Session() as session:
     def login():
             print('Iniciando painel')
-            session.get('http://setoradministrativo.agehotel.info/login.php?securitysystem=AndersonAge')
-            session.post('http://setoradministrativo.agehotel.info/login.php', data=auth_data)
-            scraping.verify_success(session.post('http://setoradministrativo.agehotel.info/pin.php', data=pin))
+            session.get(auth.security_link)
+            session.post('http://setoradministrativo.agehotel.info/login.php', data=auth.payload)
+            scraping.verify_success(session.post('http://setoradministrativo.agehotel.info/pin.php', data=auth.pin))
     
     def adicionar_pagina(id_pagina, nome_pagina, parent_id='4242000', icon_image='10', rank='7'):
         print('Criando categoria no catalogo com ID: ' + str(id_pagina) + ' e nome: ' + nome_pagina)
