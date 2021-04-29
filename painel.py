@@ -297,6 +297,11 @@ with requests.Session() as session:
             'O emblema com código ' + código + ' foi hospedado com o nome ' + título + ' e descrição ' + descrição.replace(
                 '"', ''))
 
+    async def adicionar_gif(path, message=None):
+        files = {'userfile[]': open(path, "rb")}
+        print(session.post('http://setoradministrativo.agehotel.info/salvar_emblem.php', files=files).content)
+        return await message.channel.send(f"{path.split('/')[-1]} foi hospedado.")
+
 
     def dar_emblema(nome, emblema):
         session.get(f"http://setoradministrativo.agehotel.info/index.php?page=send_emblem&i%5B%5D={nome}&ce%5B%5D={emblema}")

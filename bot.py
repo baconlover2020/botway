@@ -98,7 +98,7 @@ async def addcores(ctx, nome, cor1, cor2=''):
     cor1 = cor1.replace('#', '')
     cor2 = cor2.replace('#', '')
     icon_path = await adicionar_cor.upload_gif(cor1, cor2)
-    await adicionar_cor.hospedar_cor(nome, cor1, cor2)
+    await adicionar_cor.hospedar_cor(nome, cor1, cor2, message=ctx.message)
     _file = discord.File(icon_path)
     embed = discord.Embed(title='Cor(es) adicionada(s): ')
     embed.add_field(name='Nome:', value=nome, inline=False)
