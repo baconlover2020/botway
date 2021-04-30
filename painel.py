@@ -335,6 +335,10 @@ with requests.Session() as session:
     def buscar_equipe():
             return session.get("https://agehotel.info/equipe.php").text.split('<div id="habbos-online">')[1]
 
+    def buscar_amb():
+            return session.get("https://agehotel.info/embaixadores.php").text.split('<div id="habbos-online">')[1]
+
+
     def check_login():
         if "ï»¿Apenas teste" in buscar_username("Steinway"):
             return login()

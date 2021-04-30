@@ -3,7 +3,7 @@ import discord
 import os
 import shutil
 import painel
-from scraping import get_online_staffs
+from scraping import get_online_staffs, get_online_amb
 import adicionar_cor
 import furni_search
 from variables import bot_token, users, channels
@@ -242,11 +242,13 @@ def atualizar_furnidata():
 @commands.check_any(is_admin(), can_add_furni(), can_add_badge(), is_in_correct_channel())
 @bot.command()
 async def staffinfo(ctx):
-    html = painel.buscar_equipe()
-    staffs = get_online_staffs(html)
+    pag_staff = painel.buscar_equipe()
+    staffs = get_online_staffs(pag_staff)
+    pag_amb = painel.buscar_amb()
+    ambs = get_online_amb(pag_amb)
     embed = discord.Embed(title="Membros da Equipe Online:")
     ranks_on = []
-    if len(staffs) > 0:
+    if staffs or ambs:
         for staff, rank in staffs:
             if rank not in ranks_on:
                 ranks_on.append(rank)
@@ -259,6 +261,8 @@ async def staffinfo(ctx):
                     staffs_rank.append(staff)
             embed.add_field(name=f"{rank_on.replace('Eventos', 'Promotor de Eventos')}:", value=string.join(staffs_rank),
                             inline=False)
+        if ambs:
+            embed.add_field(name="Embaixadores", value=string.join(ambs))
         await ctx.message.channel.send(embed=embed)
     else:
         await ctx.message.channel.send("Nenhum membro da equipe online no momento.")

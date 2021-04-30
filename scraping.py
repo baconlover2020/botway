@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 
+
 def verify_success(response):
     soup = BeautifulSoup(response.content, 'html.parser')
     if not soup.find('div', {'class': 'greeting'}):
@@ -19,4 +20,16 @@ def get_online_staffs(html):
         rank = rank_element.find("span").text
         staffs_on.append((staff, rank))
     return staffs_on
+
+def get_online_amb(html):
+    soup = BeautifulSoup(html, "html.parser")
+    b = soup.find_all("b", attrs={"style": "color: black;"}, text='Online')
+    amb_on = []
+    for a in b:
+        amb_element = a.parent.parent.parent
+        amb = amb_element.find("a").text
+        amb_on.append(amb)
+    return amb_on
+        
+
 
