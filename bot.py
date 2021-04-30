@@ -6,7 +6,7 @@ import painel
 from scraping import get_online_staffs
 import adicionar_cor
 import furni_search
-from variables import bot_token, users
+from variables import bot_token, users, channels
 
 bot = commands.Bot(command_prefix='!')
 temp = 'temp'
@@ -27,6 +27,15 @@ def can_add_badge():
             if user.id == ctx.message.author.id and user.can_add_badge:
                 return True
         return False
+    return commands.check(predicate)
+
+
+def is_in_correct_channel():
+    def predicate(ctx):
+        for channel_id in channels:
+            if ctx.message.channel.id == channel_id:
+                return True
+            return False
     return commands.check(predicate)
 
 
@@ -202,6 +211,7 @@ async def mobiemblema(ctx, _id, codigo):
     await ctx.message.channel.send(f"Emblema {codigo} adicionando ao mobi {_id}")
 
 
+@commands.check_any(is_admin(), can_add_furni(), can_add_badge(), is_in_correct_channel())
 @bot.command()
 async def buscarmobi(ctx, *, mobi):
     painel.check_login()
@@ -229,6 +239,7 @@ def atualizar_furnidata():
         achar.minuscular("age_furnidata.xml")
 
 
+@commands.check_any(is_admin(), can_add_furni(), can_add_badge(), is_in_correct_channel())
 @bot.command()
 async def staffinfo(ctx):
     html = painel.buscar_equipe()
