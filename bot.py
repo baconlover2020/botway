@@ -95,6 +95,8 @@ async def addcatalogicon(ctx):
 async def addcores(ctx, nome, cor1, cor2=''):
     cor1 = cor1.replace('#', '')
     cor2 = cor2.replace('#', '')
+    if cor2 == '':
+        cor2 = cor1
     icon_path = await adicionar_cor.upload_gif(cor1, cor2)
     await adicionar_cor.hospedar_cor(nome, cor1, cor2, message=ctx.message)
     _file = discord.File(icon_path)
@@ -290,7 +292,7 @@ async def comandos(ctx):
                     value="Da o emblema escolhido aos jogadores selecionados. (precisa relogar pra aparecer)", inline=False)
     embed.add_field(name="!pagarpromo codigo jogador1 jogador2 etc",
                     value="Da o emblema escolhido e 1 age coin aos jogadores selecionados. (precisa relogar pra aparecer)", inline=False)
-    embed.add_field(name="!addcores hex_da_cor1 hex_da_cor_2",
+    embed.add_field(name="!addcores \"nome da cor \" hex_da_cor1 hex_da_cor_2",
                     value="Adiciona as cores escolhidas a aba cores de nome vip", inline=False)
     embed.add_field(name="!mobiemblema catalog_id codigo",
                     value="Adiciona um emblema ao mobi selecionado (ltd)", inline=False)
