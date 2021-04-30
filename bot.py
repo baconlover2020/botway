@@ -43,7 +43,7 @@ def is_admin():
 @bot.event
 async def on_ready():
     painel.login()
-    print(os.path.abspath(temp))
+
 
 
 @bot.command()
@@ -60,7 +60,7 @@ async def addcategoria(ctx):
         os.remove(os.path.join(temp, categoria))
     if categoria.endswith(".rar"):
         await ctx.message.channel.send(f"Descompactando: {categoria}")
-        os.system(f"unar -f -o /home/maths_menezes/botway/botway/{temp} {os.path.join(temp, categoria)}")
+        os.system(f"unar -f -o {os.path.abspath(temp)} {os.path.join(temp, categoria)}")
         os.remove(os.path.join(temp, categoria))
     categoria = categoria.strip('.rar').strip('.zip').replace('_', ' ')
     for pasta in os.listdir("temp"):
