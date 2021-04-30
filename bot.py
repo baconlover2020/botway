@@ -35,7 +35,7 @@ def is_in_correct_channel():
         for channel_id in channels:
             if ctx.message.channel.id == channel_id:
                 return True
-            return False
+        return False
     return commands.check(predicate)
 
 
