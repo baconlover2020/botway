@@ -2,7 +2,7 @@ import painel
 from PIL import Image, ImageDraw, ImageColor
 from os import remove
 
-async def upload_gif(color1, color2=''):
+async def criar_gif(color1, color2=''):
     if color2=='':
         color2 = color1
     cor1 = Image.new('RGB', (40, 40), color=ImageColor.getrgb('#' + color1))
