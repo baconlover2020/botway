@@ -262,7 +262,7 @@ async def staffinfo(ctx):
             embed.add_field(name=f"{rank_on.replace('Eventos', 'Promotor de Eventos')}:", value=string.join(staffs_rank),
                             inline=False)
         if ambs:
-            embed.add_field(name="Embaixadores", value=string.join(ambs))
+            embed.add_field(name="Embaixadores:", value=string.join(ambs))
         await ctx.message.channel.send(embed=embed)
     else:
         await ctx.message.channel.send("Nenhum membro da equipe online no momento.")
