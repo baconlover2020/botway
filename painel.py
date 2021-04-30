@@ -3,35 +3,8 @@ import os
 import discord
 import urllib.parse
 import shutil
-from variables import auth
+from variables import auth, get_id, get_icon_id, set_id
 import scraping
-
-
-if not os.path.exists('painel_ids.txt'):
-    with open('painel_ids.txt', 'w+') as f:
-        f.write('36900')
-
-
-def get_id():
-    with open('painel_ids.txt', 'r') as f:
-        _id = f.readline()
-        new_id = int(_id) + 1
-        with open('painel_ids.txt', 'w+') as w:
-            w.write(str(new_id))
-        return _id
-
-if not os.path.exists('painel_icon_id.txt'):
-    with open('painel_icon_id.txt', 'w+') as f:
-        f.write('5000')
-
-
-def get_icon_id():
-    with open('painel_icon_id.txt', 'r') as f:
-        _id = f.readline()
-        new_id = int(_id) + 1
-        with open('painel_icon_id.txt', 'w+') as w:
-            w.write(str(new_id))
-        return _id
 
 
 def get_classname(swf_path):
@@ -255,9 +228,8 @@ with requests.Session() as session:
         await adicionar_swfs(swfs_path, message)
         await adicionar_icons(icons_path, message)
         furnidata, _ids, nomes = criar_furnidatas(swfs_path, categoria_nome)##
-        with open('painel_ids.txt', 'w+') as w:
-            new_id = int(_ids[-1]) + 1
-            w.write(str(new_id))
+        new_id = int(_ids[-1]) + 1
+        set_id(new_id)
         await adicionar_furnidata(furnidata, message)
         await adicionar_furnitures(_ids, message=message)
         await adicionar_catalogos(id_pagina, categoria_nome, _ids, nomes=nomes, message=message)
