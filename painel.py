@@ -206,7 +206,7 @@ with requests.Session() as session:
         return catalogo
 
 
-    async def adicionar_catalogos(id_pagina, nome_pagina, _ids, cost_credits='5', cost_diamonds='0', nomes=None , message=None):
+    async def adicionar_catalogos(id_pagina, nome_pagina, _ids, cost_credits='5', cost_diamonds='9999999', nomes=None , message=None):
         for _id in _ids:
             await adicionar_catalogo(id_pagina, _id, nomes[_id], cost_credits, cost_diamonds=cost_diamonds, message=message)
         print('Todos os mobis foram adicionados ao catalogo')
