@@ -13,6 +13,7 @@ not_found = "Nenhuma categoria encontrada :c"
 furniture_objects_tree = ET.parse("xml/furniture_objects.xml")
 furniture_objects = furniture_objects_tree.getroot()
 def find_key(key):
+    key = key.lower()
     furni_list = []
     for furniture in furniture_objects:
         if key in furniture.get("name"):
