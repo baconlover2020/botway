@@ -43,6 +43,7 @@ def is_admin():
 @bot.event
 async def on_ready():
     painel.login()
+    print(os.path.abspath(temp))
 
 
 @bot.command()
@@ -273,7 +274,7 @@ async def movercategoria(ctx, *args):
         return await ctx.message.channel.send(f"Parâmetros Inválidos D;")
 
 
-@commands.check_any(is_admin(), can_add_furni())
+@commands.check_any(is_admin(), can_add_furni(), can_add_badge())
 @bot.command()
 async def comandos(ctx):
     embed = discord.Embed(title="Comandos: ")
