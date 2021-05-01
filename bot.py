@@ -101,6 +101,11 @@ async def addcatalogicon(ctx):
 
 
 @bot.command()
+async def maifoy(ctx):
+    return await ctx.message.channel.send(file=discord.File('maifoy.mp4'))
+
+
+@bot.command()
 @commands.check_any(is_admin())
 async def addcores(ctx, nome, cor1, cor2=''):
     cor1 = cor1.replace('#', '')
