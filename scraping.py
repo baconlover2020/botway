@@ -32,4 +32,11 @@ def get_online_amb(html):
     return amb_on
         
 
+def id_categoria(html):
+    soup = BeautifulSoup(html, "html.parser")
+    items = soup.find_all(attrs={"data-column": "id"})
+    categorias = []
+    for categoria in items:
+        categorias.append(categoria.text.strip('\n').strip(' '))
+    return categorias
 

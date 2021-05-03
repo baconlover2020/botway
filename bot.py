@@ -3,7 +3,7 @@ import discord
 import os
 import shutil
 import painel
-from scraping import get_online_staffs, get_online_amb
+from scraping import get_online_staffs, get_online_amb, id_categoria
 import adicionar_cor
 import furni_search
 from variables import bot_token, users, channels
@@ -124,7 +124,7 @@ async def novoicone(ctx, *, categoria):
     print(f"Buscando {categoria}")
     html = painel.buscar_categoria_por_nome(categoria)
     try:
-        catalog_id = achar.id_categoria(html)[0]
+        catalog_id = id_categoria(html)[0]
         icon_id = await addcatalogicon(ctx)
         await painel.update_catalog_icon(catalog_id, icon_id, message=ctx.message)
     except Exception as e:
@@ -233,10 +233,7 @@ async def buscarmobi(ctx, *, mobi):
             embed.add_field(name=f"{categoria}:", value="\n".join(furnis_categoria), inline=False)
         await ctx.message.channel.send(embed=embed) 
 
-def atualizar_furnidata():
-    with open("age_furnidata.xml", 'w', encoding='utf-8') as furnidata:
-        furnidata.write(painel.furnidata())
-        achar.minuscular("age_furnidata.xml")
+
 
 
 @commands.check_any(is_admin(), can_add_furni(), can_add_badge(), is_in_correct_channel())
@@ -281,8 +278,8 @@ async def movercategoria(ctx, *args):
             child, parent, parent_pos, child_pos,  = args[0], args[1], args[2], 1
     if len(args) == 4:
         child, child_pos, parent, parent_pos = args[0], args[1], args[2], args[3]
-    child_id = achar.id_categoria(painel.buscar_categoria_por_nome(child))[int(child_pos)-1]
-    parent_id = achar.id_categoria(painel.buscar_categoria_por_nome(parent))[int(parent_pos)-1]
+    child_id = id_categoria(painel.buscar_categoria_por_nome(child))[int(child_pos)-1]
+    parent_id = id_categoria(painel.buscar_categoria_por_nome(parent))[int(parent_pos)-1]
     await painel.update("catalog_pages", child_id, "parent_id", parent_id, ctx.message)
     await ctx.message.channel.send(f"{child} movido para {parent}")
     if len(args) > 4:
