@@ -279,6 +279,7 @@ async def movercategoria(ctx, *args):
 
 
 @bot.command()
+@commands.check_any(is_admin(), can_add_badge())
 async def removeremblema(ctx, username, codigo):
     return await ctx.message.channel.send(rmemblema(username, codigo))
 
