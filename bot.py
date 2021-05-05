@@ -100,7 +100,7 @@ async def addcatalogicon(ctx):
     return _id
 
 
-@bot.command()
+@bot.command(aliases=["addcor"])
 @commands.check_any(is_admin())
 async def addcores(ctx, nome, cor1, cor2=''):
     cor1 = cor1.replace('#', '')
@@ -152,15 +152,6 @@ async def addemblema(ctx, cod, nome, desc, _url=None):
     os.remove(os.path.join("temp", cod + '.gif'))
     await ctx.message.channel.send(embed=embed)
 
-@bot.command()
-@commands.check_any(is_admin(), can_add_badge())
-async def daremblema(ctx, nome, emblema):
-    painel.check_login()
-    nome, emblema = painel.dar_emblema(nome, emblema)
-    embed = discord.Embed(title="Emblema enviado: ")
-    embed.add_field(name="Emblema:", value=emblema)
-    embed.add_field(name="Jogador:", value=nome)
-    await ctx.message.channel.send(embed=embed)
 
 @bot.command()
 @commands.check_any(is_admin(), can_add_badge())
@@ -183,7 +174,7 @@ async def pagarpromo(ctx, *, args):
         print(e)
 
 
-@bot.command()
+@bot.command(aliases=["daremblema"])
 @commands.check_any(is_admin(), can_add_badge())
 async def daremblemas(ctx, *, args):
     painel.check_login()
@@ -212,7 +203,7 @@ async def mobiemblema(ctx, _id, codigo):
 
 
 @commands.check_any(is_admin(), can_add_furni(), can_add_badge(), is_in_correct_channel())
-@bot.command()
+@bot.command(aliases=["buscarmobis", "procurarmobi", "procurarmobis"])
 async def buscarmobi(ctx, *, mobi):
     painel.check_login()
     await ctx.message.channel.send(f"Aguarde... Buscando mobi: '{mobi}'...")
@@ -237,7 +228,7 @@ async def buscarmobi(ctx, *, mobi):
 
 
 @commands.check_any(is_admin(), can_add_furni(), can_add_badge(), is_in_correct_channel())
-@bot.command()
+@bot.command(aliases=["infostaff"])
 async def staffinfo(ctx):
     pag_staff = painel.buscar_equipe()
     staffs = get_online_staffs(pag_staff)
