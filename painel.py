@@ -320,6 +320,15 @@ with requests.Session() as session:
         response = session.get(f"http://setoradministrativo.agehotel.info/index.php?page=furniture&what=sprite_id&q={sprite_id}")
         return response.text
 
+
+    def buscar_emblema(username, codigo):
+        return session.get(f"http://setoradministrativo.agehotel.info/index.php?page=get_emblem&i={username}&code={codigo}").content
+
+
+    def remover_emblema_por_id(_id):
+        return session.get(f"http://setoradministrativo.agehotel.info/index.php?page=get_emblem&remover={_id}")
+
+
     def furnidata():
         response = session.get(f"https://agehotel.info/game/gamedata/ANDERSON2021.xml")
         return response.text

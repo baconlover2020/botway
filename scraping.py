@@ -40,3 +40,8 @@ def id_categoria(html):
         categorias.append(categoria.text.strip('\n').strip(' '))
     return categorias
 
+def get_badges(html):
+    soup = BeautifulSoup(html, "html.parser")
+    _id = soup.find("div", attrs={"data-column": "id"}).text.replace('\n', '').replace(' ', '')
+    if _id:
+        return _id

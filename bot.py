@@ -6,6 +6,7 @@ import painel
 from scraping import get_online_staffs, get_online_amb, id_categoria
 import adicionar_cor
 import furni_search
+from removeremblema import removeremblema as rmemblema
 from variables import bot_token, users, channels
 
 bot = commands.Bot(command_prefix='!')
@@ -275,6 +276,11 @@ async def movercategoria(ctx, *args):
     await ctx.message.channel.send(f"{child} movido para {parent}")
     if len(args) > 4:
         return await ctx.message.channel.send(f"Parâmetros Inválidos D;")
+
+
+@bot.command()
+async def removeremblema(ctx, username, codigo):
+    return await ctx.message.channel.send(rmemblema(username, codigo))
 
 
 @commands.check_any(is_admin(), can_add_furni(), can_add_badge())
