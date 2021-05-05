@@ -19,6 +19,7 @@ with requests.Session() as session:
             session.post('http://setoradministrativo.agehotel.info/login.php', data=auth.payload)
             scraping.verify_success(session.post('http://setoradministrativo.agehotel.info/pin.php', data=auth.pin))
     
+
     def adicionar_pagina(id_pagina, nome_pagina, parent_id='4242000', icon_image='10', rank='7'):
         print('Criando categoria no catalogo com ID: ' + str(id_pagina) + ' e nome: ' + nome_pagina)
         pagina = {
@@ -44,11 +45,13 @@ with requests.Session() as session:
         print('Categoria ' + nome_pagina + ' criada com sucesso.')
         return nome_pagina
 
+
     async def adicionar_catalog_icon(catalog_item_path, message=None):
         files = {'userfile[]': open(catalog_item_path, 'rb')}
         session.post('http://setoradministrativo.agehotel.info/salvar_catalog.php', files=files)
         await message.channel.send(f"{os.path.basename(catalog_item_path)} foi hospedado em catalog.")
         return catalog_item_path
+
 
     async def adicionar_icon(icon_path, message=None):
         icon_path = icon_path.replace('\\', '/').replace('"', '')
@@ -82,6 +85,7 @@ with requests.Session() as session:
         await message.channel.send(f"{swf_path.split('/')[-1]} foi hospedado.")
         return swf_path.split('/')[-1]
 
+
     async def hospedar_attachments(message=None):
         for attachment in message.attachments:
             if attachment.filename.endswith(".swf"):
@@ -94,7 +98,6 @@ with requests.Session() as session:
                 await message.channel.send(f"{attachment.filename} foi hospedado.")
 
 
-
     async def adicionar_swfs(swfs_path, message=None):
         print('Hospedando SWF')
         for swf in os.listdir(swfs_path):
@@ -105,8 +108,10 @@ with requests.Session() as session:
     def criar_furnidata(classname, nome, descrição, _id=get_id()):
         return f"<furnitype id=\"{str(_id)}\" classname=\"{classname}\">\n<revision>500008</revision> \n<defaultdir>0</defaultdir> \n<xdim>1</xdim> <ydim>1</ydim> \n<partcolors> <color>0</color> \n<color>0</color> <color>0</color> \n</partcolors> <name>{nome}</name> \n<description>{descrição}</description> \n<adurl/> <offerid>-1</offerid> <buyout>0</buyout> \n<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> \n<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> \n<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> \n"
 
+
     def criar_furnidata_color(classname, nome, descrição, _id=get_id(), cor1="ffffff", cor2="ffffff"):
         return f"<furnitype id=\"{_id}\" classname=\"{classname}\">\n<revision>56688</revision>\n<defaultdir>0</defaultdir>\n<xdim>1</xdim>\n<ydim>1</ydim>\n<partcolors>\n<color>#{cor1.strip('#')}</color>\n<color>#{cor2.strip('#')}</color>\n</partcolors>\n<name>{nome}</name>\n<description>{descrição}</description>\n<adurl/>\n<offerid>-1</offerid>\n<buyout>0</buyout>\n<rentofferid>-1</rentofferid>\n<rentbuyout>0</rentbuyout>\n<bc>1</bc>\n<excludeddynamic>0</excludeddynamic>\n<customparams>-0.25</customparams>\n<specialtype>1</specialtype>\n<canstandon>1</canstandon>\n<cansiton>0</cansiton>\n<canlayon>0</canlayon>\n</furnitype>"
+
 
     def criar_furnidatas(swf_path, categoria):
         print(f'---------- Criando furnidata para {categoria} ----------')
@@ -144,7 +149,6 @@ with requests.Session() as session:
             furnidata_file = discord.File(open('furnidata.xml', 'rb'))
         return await message.channel.send(file=furnidata_file)
         
-
 
     async def adicionar_furniture(_id, public_name='steinlindo', item_name='steinlindo', _type='s', width='1', length='1',
                             stack_heigth='0', can_stack='1', can_sit='0', is_walkable='0',
@@ -223,8 +227,6 @@ with requests.Session() as session:
                 swfs_path = os.path.abspath(os.path.join(categoria, pasta))
             if pasta.lower() == 'icon' or pasta.lower() == 'icons':
                 icons_path = os.path.abspath(os.path.join(categoria, pasta))
-            #if swfs_path == '' or icons_path == '':
-                #return
         await adicionar_swfs(swfs_path, message)
         await adicionar_icons(icons_path, message)
         furnidata, _ids, nomes = criar_furnidatas(swfs_path, categoria_nome)##
@@ -253,11 +255,9 @@ with requests.Session() as session:
     def hospedar_emblema1(url, código, título, descrição):
         if not url.startswith('http'):
             return
-
         response = requests.get(url, stream=True)
         with open('temp/' + código + '.gif', 'wb') as f:
             shutil.copyfileobj(response.raw, f)
-
         files = {'userfile[]': open(f"temp/{código}.gif", "rb")}
         session.post('http://setoradministrativo.agehotel.info/salvar_emblem.php', files=files)
         del response
@@ -268,6 +268,7 @@ with requests.Session() as session:
         print(
             'O emblema com código ' + código + ' foi hospedado com o nome ' + título + ' e descrição ' + descrição.replace(
                 '"', ''))
+                
 
     async def adicionar_gif(path, message=None):
         files = {'userfile[]': open(path, "rb")}
@@ -347,4 +348,3 @@ with requests.Session() as session:
 
     def check_username(username):
         requests.get(f"https://agehotel.info/home/{username}")
-            

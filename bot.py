@@ -167,9 +167,9 @@ async def daremblema(ctx, nome, emblema):
 async def pagarpromo(ctx, *, args):
     painel.check_login()
     try:
-        emblema = args.split(' ')[0]
-        args = args.strip(' ').strip(emblema)
-        args = args.split("-")
+        args = args.split(' ')
+        emblema = args[0]
+        args = args[1:]
         nomes = []
         for nome in args:
             painel.dar_emblema(nome.strip(' '), emblema)
