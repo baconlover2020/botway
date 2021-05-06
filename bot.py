@@ -207,7 +207,6 @@ async def mobiemblema(ctx, _id, codigo):
 @bot.command(aliases=["buscarmobis", "procurarmobi", "procurarmobis"])
 async def buscarmobi(ctx, *, mobi):
     painel.check_login()
-    await ctx.message.channel.send(f"Aguarde... Buscando mobi: '{mobi}'...")
     furnis = furni_search.find_key(mobi)
     if type(furnis) != type([]):
         return await ctx.message.channel.send(furnis)
