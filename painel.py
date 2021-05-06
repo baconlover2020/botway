@@ -152,7 +152,7 @@ with requests.Session() as session:
 
     async def adicionar_furniture(_id, public_name='steinlindo', item_name='steinlindo', _type='s', width='1', length='1',
                             stack_heigth='0', can_stack='1', can_sit='0', is_walkable='0',
-                            sprite_id='', interaction_type='default', interaction_modes_count='10', vending_ids='0',
+                            sprite_id='', allow_gift='0', interaction_type='default', interaction_modes_count='10', vending_ids='0',
                             effect_id='0', variable_heights='0', song_id='0', message=None):
         if sprite_id == '':
             sprite_id = _id
@@ -160,7 +160,7 @@ with requests.Session() as session:
                      'width[]': width, 'length[]': length, 'stack_height[]': stack_heigth, 'can_stack[]': can_stack,
                      'can_sit[]': can_sit, 'is_walkable[]': is_walkable, 'sprite_id[]': sprite_id,
                      'allow_recycle[]': '1', 'allow_trade[]': '1', 'allow_marketplace_sell[]': '1',
-                     'allow_gift_back[]': '1', 'allow_gift[]': '1', 'allow_inventory_stack[]': '1',
+                     'allow_gift_back[]': '1', 'allow_gift[]': allow_gift, 'allow_inventory_stack[]': '1',
                      'interaction_type[]': interaction_type, 'interaction_modes_count[]': interaction_modes_count,
                      'vending_ids[]': vending_ids, 'is_arrow[]': '0', 'foot_figure[]': '0', 'stack_multiplier[]': '0',
                      'subscriber[]': '0', 'effect_id[]': effect_id, 'variable_heights[]': variable_heights,
