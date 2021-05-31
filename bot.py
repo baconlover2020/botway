@@ -1,3 +1,4 @@
+import pickle
 from discord.ext import commands
 import discord
 import os
@@ -225,6 +226,12 @@ async def buscarmobi(ctx, *, mobi):
         await ctx.message.channel.send(embed=embed) 
 
 
+@commands.check_any(is_admin())
+@bot.command(aliases=["atualizartemp", "novatemporada", "novatemp"])
+async def atualizartemporada(ctx, cod, max_level):
+    with open('vars/winway', 'wb') as f:
+        pickle.dump(f"{cod.upper()} {max_level}", f)
+    await ctx.message.channel.send("Temporada atualizada com sucesso.")
 
 
 @commands.check_any(is_admin(), can_add_furni(), can_add_badge(), is_in_correct_channel())
