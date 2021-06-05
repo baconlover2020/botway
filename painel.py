@@ -174,9 +174,15 @@ with requests.Session() as session:
         return furniture
 
 
-    async def adicionar_furnitures(_ids, message=None):
+    async def adicionar_furnitures(_ids, public_name='steinlindo', item_name='steinlindo', _type='s', width='1', length='1',
+                            stack_heigth='0', can_stack='1', can_sit='0', is_walkable='0',
+                            sprite_id='', allow_gift='1', interaction_type='default', interaction_modes_count='10', vending_ids='0',
+                            effect_id='0', variable_heights='0', song_id='0', message=None):
         for _id in _ids:
-            await adicionar_furniture(_id, message=message)
+            await adicionar_furniture(_id, public_name=public_name, item_name=item_name, _type=_type, width=width, length=length,
+                            stack_heigth=stack_heigth, can_stack=can_stack, can_sit=can_sit, is_walkable=is_walkable,
+                            sprite_id=sprite_id, allow_gift='0', interaction_type=interaction_type, interaction_modes_count=interaction_modes_count, vending_ids=vending_ids,
+                            effect_id=effect_id, variable_heights=variable_heights, song_id=song_id, message=message)
         print('Todos os mobis foram adicionados ao furniture')
 
 
@@ -250,6 +256,38 @@ with requests.Session() as session:
                             vending_ids=vending_ids)
         adicionar_catalogo(id_pagina, nome, _id, cost_credits=cost_credits, cost_diamonds=cost_diamonds,
                            extradata=extra_data)
+
+    
+    async def adicionar_music_furni(nome_arquivo, nome_música, artista, song_data, message):
+        musica = {
+            'name[]': nome_arquivo,
+            'title[]': nome_música,
+            'artist[]': artista,
+            'song_data[]': song_data,
+            'length[]': str(song_data)[-3:]
+        }
+        session.post('http://setoradministrativo.agehotel.info/index.php?page=add-furniture_music', data=musica)
+        await message.channel.send(f"Uma nova musica foi adicionada ao music_furni com os parametros: {nome_arquivo} {song_data}")
+    
+    async def hospedar_mp3(mp3, message):
+        if not mp3.endswith('.mp3'):
+            mp3 += '.mp3'
+        with open(mp3, 'rb') as f:
+            musica = {'userfile': f}
+            r = session.post('http://setoradministrativo.agehotel.info/salvar_mp3.php', files=musica)
+            print(r.text)
+            if not 'sucesso!' in r.text:
+                await message.channel.send("O arquivo é grande demais para ser hospedado :c")
+                raise Exception("O arquivo é grande demais para ser hospedado :c")
+            else:
+                return await message.channel.send("O arquivo mp3 foi hospedado com sucesso!")
+
+    async def adicionar_musica(mp3, song_data, nome_arquivo, nome_música, artista, song_id, _id, message):
+        await hospedar_mp3(mp3, message)
+        await adicionar_music_furni(nome_arquivo, nome_música, artista, song_data, message)
+        await adicionar_furnidata(criar_furnidata("song_disk", nome_música, artista, _id=_id), message)
+        await adicionar_furniture(_id, public_name=f"{nome_música} - {artista}" ,stack_heigth='0.1', sprite_id=_id, interaction_type='musicdisc', interaction_modes_count='2', song_id=song_id, message=message)
+        await adicionar_catalogo(4206900, str(_id), f"{nome_música} - {artista}", song_id=song_id, extradata=nome_arquivo, message=message)
 
 
     def hospedar_emblema1(url, código, título, descrição):

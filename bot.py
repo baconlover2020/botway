@@ -6,6 +6,7 @@ import shutil
 import painel
 from scraping import get_online_staffs, get_online_amb, id_categoria
 import adicionar_cor
+import adicionar_musica as add_music
 import furni_search
 from removeremblema import removeremblema as rmemblema
 from variables import bot_token, users, channels
@@ -315,6 +316,23 @@ async def comandos(ctx):
                     value="Adiciona um emblema ao mobi selecionado (ltd)", inline=False)
     await ctx.message.channel.send(embed=embed)
 
+
+@commands.check_any(is_admin())
+@bot.command()
+async def adicionar_musica(ctx, nome_musica, artista, youtube_link):
+    await ctx.message.channel.send(f"Baixando {nome_musica}...")
+    mp3, song_data, nome_arquivo = add_music.generate_mp3(youtube_link, f"sound_machine_sample_{add_music.get_file_number()}")
+    song_id, furni_id = add_music.get_song_id(), add_music.get_furni_id()
+    try:
+        await painel.adicionar_musica(mp3, song_data, nome_arquivo, nome_musica, artista, song_id, furni_id, ctx.message)
+        await ctx.message.channel.send('Música adicionada com sucesso!')
+        os.remove(os.path.join(temp, f"{nome_arquivo}.mp3"))
+    except:
+        add_music.update_ids(int(add_music.get_file_number()) - 2, int(add_music.get_song_id()) -2, int(add_music.get_furni_id()) -2)
+        await ctx.message.channel.send('Erro ao adicionar música :c')
+        os.remove(os.path.join(temp, f"{nome_arquivo}.mp3"))
+    
+    
 
 def verificar_coerencia(categoria, pasta):
     counter = 0
