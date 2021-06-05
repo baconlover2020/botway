@@ -287,7 +287,7 @@ with requests.Session() as session:
         await adicionar_music_furni(nome_arquivo, nome_música, artista, song_data, message)
         await adicionar_furnidata(criar_furnidata("song_disk", nome_música, artista, _id=_id), message)
         await adicionar_furniture(_id, public_name=f"{nome_música} - {artista}" ,stack_heigth='0.1', sprite_id=_id, interaction_type='musicdisc', interaction_modes_count='2', song_id=song_id, message=message)
-        await adicionar_catalogo(4206900, str(_id), f"{nome_música} - {artista}", song_id=song_id, extradata=nome_arquivo, message=message)
+        await adicionar_catalogo(4206900, str(_id), f"{nome_música} - {artista}", song_id=song_id, cost_diamonds='0' ,extradata=nome_arquivo, message=message)
 
 
     def hospedar_emblema1(url, código, título, descrição):
