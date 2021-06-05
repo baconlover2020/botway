@@ -51,7 +51,7 @@ def get_furni_id():
         file_number, song_id, furni_id = pickle.load(f)
         furni_id += 1
         with open('music_ids', 'wb') as w:
-            pickle.dump((furni_id, song_id, furni_id), w)
+            pickle.dump((file_number, song_id, furni_id), w)
     return str(furni_id)
 
 
