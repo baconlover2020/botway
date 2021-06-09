@@ -9,6 +9,7 @@ import adicionar_cor
 import adicionar_musica as add_music
 import furni_search
 from removeremblema import removeremblema as rmemblema
+from adicionar_emblema import hospedar_emblema
 from variables import bot_token, users, channels
 
 bot = commands.Bot(command_prefix='!')
@@ -146,13 +147,12 @@ async def addemblema(ctx, cod, nome, desc, _url=None):
         url = _url
     else:
         return
-    painel.hospedar_emblema1(url, cod, nome, desc)
+    hospedar_emblema(url, cod, nome, desc)
     embed = discord.Embed(title="Emblema Hospedado!", color=discord.Color.dark_orange())
     embed.set_image(url=url)
     embed.add_field(name="Código: ", value=cod, inline=False)
     embed.add_field(name="Título: ", value=nome, inline=False)
     embed.add_field(name="Descrição: ", value=desc, inline=False)
-    os.remove(os.path.join("temp", cod + '.gif'))
     await ctx.message.channel.send(embed=embed)
 
 
