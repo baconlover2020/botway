@@ -12,5 +12,9 @@ def get_code():
 def get_names():
     return "Steinway HWA-RPG SpaceBlythe MariettaSanchez"
 
+@app.route("/autorizados")
+def get_autorizados():
+    return "Steinway lolaindaeyo teresa170 Guinness Maifoy Osgar Luiza. Ranger. Tassi."
+
 if __name__ == '__main__':
       app.run(host='0.0.0.0', port=80)
