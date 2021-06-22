@@ -301,7 +301,7 @@ with requests.Session() as session:
 
     
     def hospedar_desc_emblema(codigo, desc):
-        session.get(f"http://setoradministrativo.agehotel.info/index.php?page=badge_name&i%5B%5D={urllib.parse.quote(codigo)}&d%5B%5D={urllib.parse.quote(desc)}")
+        session.get(f"http://setoradministrativo.agehotel.info/index.php?page=badge_desc&i%5B%5D={urllib.parse.quote(codigo)}&d%5B%5D={urllib.parse.quote(desc)}")
 
 
     def dar_emblema(nome, emblema):
