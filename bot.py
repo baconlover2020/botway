@@ -19,7 +19,7 @@ temp = 'temp'
 def can_add_furni():
     def predicate(ctx):
         for user in users:
-            if user.id == ctx.message.author.id and user.can_add_furni():
+            if user.id == ctx.message.author.id and user.can_add_furni:
                 return True
         return False
     return commands.check(predicate)
