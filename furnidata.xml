@@ -1,0 +1,528 @@
+<furnitype id="60582" classname="vwave_c21_frenchbulldog">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Frenchbulldog </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60583" classname="vwave_c21_palm">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Palm </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60584" classname="vwave_c21_glitchbench">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Glitchbench </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60585" classname="vwave_c21_wall">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Wall </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60586" classname="vwave_c21_glitchpavement">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Glitchpavement </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60587" classname="vwave_ltd21_lambo">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave Ltd21 Lambo </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60588" classname="vwave_c21_parkingmeter">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Parkingmeter </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60589" classname="vwave_c21_floppydisk">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Floppydisk </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60590" classname="vwave_c21_mocktails">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Mocktails </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60591" classname="vwave_c21_buildings">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Buildings </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60592" classname="vwave_c21_glitchpalm">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Glitchpalm </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60593" classname="vwave_r21_motorbike">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave R21 Motorbike </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60594" classname="vwave_c21_barstool">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Barstool </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60595" classname="vwave_c21_motelrooms">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Motelrooms </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60596" classname="vwave_c21_glitchnightsand">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Glitchnightsand </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60597" classname="vwave_c21_posters">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Posters </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60598" classname="vwave_c21_glitchwall">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Glitchwall </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60599" classname="vwave_c21_glitchplanter">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Glitchplanter </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60600" classname="vwave_c21_streetlight">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Streetlight </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60601" classname="vwave_c21_pavement">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Pavement </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60602" classname="vwave_c21_glitchrailcrnr">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Glitchrailcrnr </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60603" classname="vwave_c21_rubiks">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Rubiks </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60604" classname="vwave_c21_sunsetbg">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Sunsetbg </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60605" classname="vwave_c21_barglasses">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Barglasses </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60606" classname="vwave_c21_glitchbuildings">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Glitchbuildings </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60607" classname="vwave_c21_brokentech">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Brokentech </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60608" classname="vwave_r21_jukebox">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave R21 Jukebox </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60609" classname="vwave_c21_motelfront">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Motelfront </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60610" classname="vwave_c21_neonsigns">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Neonsigns </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60611" classname="vwave_c21_bench">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Bench </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60612" classname="vwave_c21_railing">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Railing </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60613" classname="vwave_c21_glitchsunsetbg">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Glitchsunsetbg </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60614" classname="vwave_c21_drinkshelf">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Drinkshelf </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60615" classname="vwave_c21_bartable">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Bartable </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60616" classname="vwave_c21_pc">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Pc </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60617" classname="vwave_c21_planter">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Planter </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60618" classname="vwave_c21_glitchstreetlight">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Glitchstreetlight </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60619" classname="vwave_c21_nightclub">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Nightclub </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60620" classname="vwave_c21_glitchrailing">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Glitchrailing </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60621" classname="vwave_c21_trash">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Trash </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60622" classname="vwave_c21_cctv">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Cctv </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60623" classname="vwave_c21_dumpster">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Dumpster </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60624" classname="vwave_c21_railcrnr">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Railcrnr </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 
+<furnitype id="60625" classname="vwave_c21_nightsand">
+<revision>500008</revision> 
+<defaultdir>0</defaultdir> 
+<xdim>1</xdim> <ydim>1</ydim> 
+<partcolors> <color>0</color> 
+<color>0</color> <color>0</color> 
+</partcolors> <name>Vwave C21 Nightsand </name> 
+<description>Ver╞o Neon</description> 
+<adurl/> <offerid>-1</offerid> <buyout>0</buyout> 
+<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> 
+<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> 
+<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> 

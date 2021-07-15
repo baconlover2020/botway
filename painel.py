@@ -288,30 +288,20 @@ with requests.Session() as session:
         await adicionar_furnidata(criar_furnidata("song_disk", nome_música, artista, _id=_id), message)
         await adicionar_furniture(_id, public_name=f"{nome_música} - {artista}" ,stack_heigth='0.1', sprite_id=_id, interaction_type='musicdisc', interaction_modes_count='2', song_id=song_id, message=message)
         await adicionar_catalogo(4206900, str(_id), f"{nome_música} - {artista}", song_id=song_id, cost_diamonds='0' ,extradata=nome_arquivo, message=message)
-
-
-    def hospedar_emblema1(url, código, título, descrição):
-        if not url.startswith('http'):
-            return
-        response = requests.get(url, stream=True)
-        with open('temp/' + código + '.gif', 'wb') as f:
-            shutil.copyfileobj(response.raw, f)
-        files = {'userfile[]': open(f"temp/{código}.gif", "rb")}
-        session.post('http://setoradministrativo.agehotel.info/salvar_emblem.php', files=files)
-        del response
-        session.get('http://setoradministrativo.agehotel.info/index.php?page=badge_name&i%5B%5D=' + urllib.parse.quote(
-            código) + '&d%5B%5D=' + urllib.parse.quote(título))
-        session.get('http://setoradministrativo.agehotel.info/index.php?page=badge_desc&i%5B%5D=' + urllib.parse.quote(
-            código) + '&d%5B%5D=' + urllib.parse.quote(descrição.replace('"', '')))
-        print(
-            'O emblema com código ' + código + ' foi hospedado com o nome ' + título + ' e descrição ' + descrição.replace(
-                '"', ''))
                 
 
-    async def adicionar_gif(path, message=None):
-        files = {'userfile[]': open(path, "rb")}
-        session.post('http://setoradministrativo.agehotel.info/salvar_emblem.php', files=files)
-        return await message.channel.send(f"{path.split('/')[-1]} foi hospedado.")
+    def hospedar_gif(path):
+        with open(path, 'rb') as gif:
+            session.post('http://setoradministrativo.agehotel.info/salvar_emblem.php', files={'userfile[]': gif})
+            print(f"{path} hospedado.")
+
+
+    def hospedar_nome_emblema(codigo, nome):
+        session.get(f"http://setoradministrativo.agehotel.info/index.php?page=badge_name&i%5B%5D={urllib.parse.quote(codigo)}&d%5B%5D={urllib.parse.quote(nome)}")
+
+    
+    def hospedar_desc_emblema(codigo, desc):
+        session.get(f"http://setoradministrativo.agehotel.info/index.php?page=badge_desc&i%5B%5D={urllib.parse.quote(codigo)}&d%5B%5D={urllib.parse.quote(desc)}")
 
 
     def dar_emblema(nome, emblema):
@@ -346,6 +336,9 @@ with requests.Session() as session:
     def buscar_item_id_no_catalogo(item_id):
         response = session.get(f"http://setoradministrativo.agehotel.info/index.php?page=catalog_items&what=item_ids&q={item_id}")
         return response.text
+
+    async def enviar_currency(username, moedas, diamantes, duckets):
+        return session.get(f"http://setoradministrativo.agehotel.info/index.php?page=send_send&i={str(username)}&m={str(moedas)}&di={str(diamantes)}&du={str(duckets)}")
 
     def buscar_categoria_por_id(id_categoria):
         response = session.get(f"http://setoradministrativo.agehotel.info/index.php?page=catalog_pages&what=id&q={id_categoria}")

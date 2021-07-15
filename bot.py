@@ -9,6 +9,7 @@ import adicionar_cor
 import adicionar_musica as add_music
 import furni_search
 from removeremblema import removeremblema as rmemblema
+from adicionar_emblema import hospedar_emblema
 from variables import bot_token, users, channels
 
 bot = commands.Bot(command_prefix='!')
@@ -18,7 +19,7 @@ temp = 'temp'
 def can_add_furni():
     def predicate(ctx):
         for user in users:
-            if user.id == ctx.message.author.id and user.can_add_furni():
+            if user.id == ctx.message.author.id and user.can_add_furni:
                 return True
         return False
     return commands.check(predicate)
@@ -146,13 +147,12 @@ async def addemblema(ctx, cod, nome, desc, _url=None):
         url = _url
     else:
         return
-    painel.hospedar_emblema1(url, cod, nome, desc)
+    hospedar_emblema(url, cod, nome, desc)
     embed = discord.Embed(title="Emblema Hospedado!", color=discord.Color.dark_orange())
     embed.set_image(url=url)
     embed.add_field(name="Código: ", value=cod, inline=False)
     embed.add_field(name="Título: ", value=nome, inline=False)
     embed.add_field(name="Descrição: ", value=desc, inline=False)
-    os.remove(os.path.join("temp", cod + '.gif'))
     await ctx.message.channel.send(embed=embed)
 
 
@@ -289,6 +289,20 @@ async def movercategoria(ctx, *args):
 @commands.check_any(is_admin(), can_add_badge())
 async def removeremblema(ctx, username, codigo):
     return await ctx.message.channel.send(rmemblema(username, codigo))
+
+
+@bot.command()
+@commands.check_any(is_admin())
+async def pagamentomensal(ctx, *, users):
+    moedas = 0
+    diamantes = 10000
+    duckets = 1000
+    users = users.split(' ')
+    embed = discord.Embed(title="Users pagos: ")
+    for user in users:
+        await painel.enviar_currency(user, moedas, diamantes, duckets)
+        embed.add_field(name=user, value=f"Diamantes: {str(diamantes)} duckets: {str(duckets)}")
+    return await ctx.message.channel.send(embed=embed) 
 
 
 @commands.check_any(is_admin(), can_add_furni(), can_add_badge())
