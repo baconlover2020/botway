@@ -337,6 +337,9 @@ with requests.Session() as session:
         response = session.get(f"http://setoradministrativo.agehotel.info/index.php?page=catalog_items&what=item_ids&q={item_id}")
         return response.text
 
+    async def enviar_currency(username, moedas, diamantes, duckets):
+        return session.get(f"http://setoradministrativo.agehotel.info/index.php?page=send_send&i={str(username)}&m={str(moedas)}&di={str(diamantes)}&du={str(duckets)}")
+
     def buscar_categoria_por_id(id_categoria):
         response = session.get(f"http://setoradministrativo.agehotel.info/index.php?page=catalog_pages&what=id&q={id_categoria}")
         return response.text

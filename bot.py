@@ -291,6 +291,20 @@ async def removeremblema(ctx, username, codigo):
     return await ctx.message.channel.send(rmemblema(username, codigo))
 
 
+@bot.command()
+@commands.check_any(is_admin())
+async def pagamentomensal(ctx, *, users):
+    moedas = 0
+    diamantes = 10000
+    duckets = 1000
+    users = users.split(' ')
+    embed = discord.Embed(title="Users pagos: ")
+    for user in users:
+        await painel.enviar_currency(user, moedas, diamantes, duckets)
+        embed.add_field(name=user, value=f"Diamantes: {str(diamantes)} duckets: {str(duckets)}")
+    return await ctx.message.channel.send(embed=embed) 
+
+
 @commands.check_any(is_admin(), can_add_furni(), can_add_badge())
 @bot.command()
 async def comandos(ctx):
