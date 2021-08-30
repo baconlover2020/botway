@@ -157,6 +157,58 @@ async def addemblema(ctx, cod, nome, desc, _url=None):
 
 
 @bot.command()
+async def solicitaremblema(ctx, cod, nome, desc, _url=None):
+    painel.check_login()
+    if len(ctx.message.attachments) > 0:
+        url = ctx.message.attachments[0].url
+    elif _url is not None:
+        url = _url
+    else:
+        return
+    embed = discord.Embed(title="Solicitação de Emblema", color=discord.Color.gold())
+    embed.set_image(url=url)
+    embed.add_field(name="Código: ", value=cod, inline=False)
+    embed.add_field(name="Título: ", value=nome, inline=False)
+    embed.add_field(name="Descrição: ", value=desc, inline=False)
+    embed.add_field(name="Solicitado por: ", value=ctx.message.author.mention, inline=False)
+    msg = await ctx.message.channel.send(embed=embed)
+    await msg.add_reaction('✅')
+    await msg.add_reaction('❌')
+
+@bot.event
+async def on_reaction_add(reaction, reacter):
+    if reaction.emoji == '✅':
+        for user in users:
+                if user.id == reacter.id and user.can_add_badge and reaction.message.author.id == bot.user.id:
+                    try:
+                        embed = reaction.message.embeds[0]
+                        cod, nome, desc, solicitante = embed.fields
+                        cod, nome, desc, solicitante = cod.value, nome.value, desc.value, solicitante.value,
+                        url = embed.image.url
+                    except:
+                        return
+                    hospedar_emblema(url, cod, nome, desc)
+                    embed = discord.Embed(title="Emblema Aprovado!", color=discord.Color.green())
+                    embed.set_image(url=url)
+                    embed.add_field(name="Código: ", value=cod, inline=False)
+                    embed.add_field(name="Título: ", value=nome, inline=False)
+                    embed.add_field(name="Descrição: ", value=desc, inline=False)
+                    embed.add_field(name="Solicitado por: ", value=solicitante, inline=False)
+                    embed.add_field(name="Aprovado por: ", value=reacter.mention, inline=False)
+                    await reaction.message.channel.send(embed=embed)
+                    await reaction.message.delete()
+    if reaction.emoji == '❌' and not reacter.id == bot.user.id:
+        for user in users:
+            if user.id == reacter.id and user.can_add_badge:
+                return await reaction.message.delete()
+            if user.id == reacter.id and user.is_admin:
+                return await reaction.message.delete()
+        return False
+        
+                                
+                
+        
+@bot.command()
 @commands.check_any(is_admin(), can_add_badge())
 async def pagarpromo(ctx, *, args):
     painel.check_login()
@@ -359,5 +411,6 @@ def verificar_coerencia(categoria, pasta):
         return True
     else:
         return False
+
 
 bot.run(bot_token)
