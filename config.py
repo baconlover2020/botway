@@ -1,5 +1,7 @@
-botToken = 'ODM4OTMwNTQ1NDg3NTExNTYz.YJCQ9A.4s-d4lMa6LPw5jXg7q1Z3Qnn4qg'
+dev = 'ODM4OTMwNTQ1NDg3NTExNTYz.YJCQ9A.4s-d4lMa6LPw5jXg7q1Z3Qnn4qg'
+production = 'ODExNjI0NTIwNjE5OTE3MzQ1.YC06PA.0NvEcX1dGzvIWoW7HiL0xWFW5Lo'
 
+botToken = dev
 
 #Credenciais de login no painel
 username = 'Martinhamiguelangelo9'
