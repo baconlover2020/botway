@@ -32,8 +32,9 @@ if __name__ == '__main__':
     if arg == 'r':
         with open('serialized/ids.pickle', 'wb') as dump:
             pickle.dump(int(_id), dump)
-    if arg == 'i':
+    elif arg == 'i':
         with open('serialized/icon_ids.pickle', 'wb') as dump:
             pickle.dump(int(_id), dump)
     else: print("Use 'r' ou 'i' para ids regulares ou de icon.")
+    print(arg, _id)
 
