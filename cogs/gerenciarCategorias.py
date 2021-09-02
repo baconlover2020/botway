@@ -77,7 +77,7 @@ class AdicionarCategoria(commands.Cog):
             os.remove(path)
             update_catalog_icon(catalog_id, icon_id)
             print(icon_id)
-            await ctx.message.channel.send(f'O icone foi adicionado com sucesso na {categoria} (id: {catalog_id}')
+            await ctx.message.channel.send(f'O icone foi adicionado com sucesso na {categoria} (id: {catalog_id})')
         except Exception as e:
             print(e)
             print(html)
