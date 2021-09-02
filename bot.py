@@ -1,4 +1,5 @@
 import os
+import asyncio
 from discord.ext import commands
 from config import botToken
 from painel.painel import login
@@ -12,8 +13,13 @@ for file in os.listdir("cogs"):
 
 @bot.event
 async def on_ready():
-    pass
-    #login()
+    bot.loop.create_task(login_keep_alive())
+
+
+async def login_keep_alive():
+    while True:
+        login()
+        await asyncio.sleep(3600)
 
 
 
