@@ -7,6 +7,7 @@ from painel.painel import adicionar_catalog_icon, buscar_categoria_por_nome, upd
 from painel.scraping import id_categoria
 from painel.ids import get_icon_id
 import permissions
+import config
 
  
 def setup(bot):
@@ -17,7 +18,7 @@ class AdicionarCategoria(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    @permissions.in_correct_channel(permissions.canais_furni)
+    @permissions.in_correct_channel(config.canais_furni)
     @permissions.is_adm()
     async def adicionarCategoria(self, ctx):
         for attachment in ctx.message.attachments:
@@ -63,7 +64,7 @@ class AdicionarCategoria(commands.Cog):
 
     @commands.command()
     @permissions.is_adm()
-    @permissions.in_correct_channel(permissions.canais_icon)
+    @permissions.in_correct_channel(config.canais_icon)
     async def novoicone(self, ctx, *, categoria):
         print(f"Buscando {categoria}")
         html = buscar_categoria_por_nome(categoria)
@@ -85,7 +86,7 @@ class AdicionarCategoria(commands.Cog):
 
     @commands.command()
     @permissions.is_adm
-    @permissions.in_correct_channel(permissions.canais_furni)
+    @permissions.in_correct_channel(config.canais_furni)
     async def movercategoria(ctx, *args):
         if len(args) == 2:
             child, parent, child_pos, parent_pos = args[0], args[1], 1, 1

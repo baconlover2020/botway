@@ -3,6 +3,7 @@ from discord.ext import commands
 from painel.adicionar_emblema import hospedar_emblema
 from painel.remover_emblema import remover_emblema
 import permissions
+import config
  
 
 def setup(bot):
@@ -14,7 +15,7 @@ class HospedarEmblema(commands.Cog):
 
     @commands.command(aliases=["adicionarEmblema", "hospedar_emblema", "adicionar_emblema", "addemblema", "adicionaremblema"])
     @permissions.is_adm()
-    @permissions.in_correct_channel(permissions.canais_emblema)
+    @permissions.in_correct_channel(config.canais_emblema)
     async def hospedarEmblema(self, ctx, cod, nome, desc, _url=None):
         if len(ctx.message.attachments) > 0:
             url = ctx.message.attachments[0].url
@@ -33,7 +34,7 @@ class HospedarEmblema(commands.Cog):
 
     @commands.command()
     @permissions.is_staff()
-    @permissions.in_correct_channel(permissions.canais_emblema)
+    @permissions.in_correct_channel(config.canais_emblema)
     async def solicitaremblema(self, ctx, cod, nome, desc, evento, _url=None):
         if len(ctx.message.attachments) > 0:
             url = ctx.message.attachments[0].url

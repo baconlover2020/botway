@@ -4,6 +4,7 @@ from painel.buscar_mobi import buscar_mobi
 from painel.painel import buscar_equipe, buscar_amb
 from painel.scraping import get_online_staffs, get_online_amb
 import permissions
+import config
 
 def setup(bot):
     bot.add_cog(Buscar(bot))
@@ -13,7 +14,7 @@ class Buscar(commands.Cog):
         self.bot = bot
 
     @commands.command(aliases=["buscarmobis", "procurarmobi", "procurarmobis"])
-    @permissions.in_correct_channel(permissions.canais_buscar_mobi)
+    @permissions.in_correct_channel(config.canais_buscar_mobi)
     async def buscarmobi(self, ctx, *, mobi):
         furnis = buscar_mobi(mobi)
         if type(furnis) != type([]):
