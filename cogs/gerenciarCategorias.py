@@ -17,7 +17,7 @@ class AdicionarCategoria(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(aliases=['addcategoria, adicionarcategoria, adicionar_categoria, add_categoria'])
+    @commands.command(aliases=['addcategoria', 'adicionarcategoria', 'adicionar_categoria', 'add_categoria'])
     @permissions.in_correct_channel(config.canais_furni)
     @permissions.is_adm()
     async def adicionarCategoria(self, ctx):
