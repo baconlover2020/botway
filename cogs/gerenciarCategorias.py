@@ -85,7 +85,7 @@ class AdicionarCategoria(commands.Cog):
 
 
     @commands.command()
-    @permissions.is_adm
+    @permissions.is_adm()
     @permissions.in_correct_channel(config.canais_furni)
     async def movercategoria(ctx, *args):
         if len(args) == 2:

@@ -10,7 +10,7 @@ search_limit = 200
 exceeds_limit = "Tem mobis demais nessa busca... Tente ser mais espefico!"
 not_found = "Nenhuma categoria encontrada :c"
 
-furniture_objects_tree = ET.parse("xml/furniture_objects.xml")
+furniture_objects_tree = ET.parse("serialized/furniture_objects.xml")
 furniture_objects = furniture_objects_tree.getroot()
 def buscar_mobi(key):
     key = key.lower()
