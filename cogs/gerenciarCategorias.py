@@ -17,7 +17,7 @@ class AdicionarCategoria(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command()
+    @commands.command(aliases=['addcategoria, adicionarcategoria, adicionar_categoria, add_categoria'])
     @permissions.in_correct_channel(config.canais_furni)
     @permissions.is_adm()
     async def adicionarCategoria(self, ctx):
@@ -77,7 +77,7 @@ class AdicionarCategoria(commands.Cog):
             os.remove(path)
             update_catalog_icon(catalog_id, icon_id)
             print(icon_id)
-            await ctx.message.send(f'O icone foi adicionado com sucesso na {categoria} (id: {catalog_id}')
+            await ctx.message.channel.send(f'O icone foi adicionado com sucesso na {categoria} (id: {catalog_id}')
         except Exception as e:
             print(e)
             print(html)

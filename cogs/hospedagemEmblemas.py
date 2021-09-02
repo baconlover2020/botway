@@ -24,7 +24,7 @@ class HospedarEmblema(commands.Cog):
         else:
             return
         hospedar_emblema(url, cod, nome, desc)
-        embed = discord.Embed(title="Emblema Hospedado!", color=discord.Color.dark_orange())
+        embed = discord.Embed(title="Emblema Hospedado!", color=discord.Color.green())
         embed.set_image(url=url)
         embed.add_field(name="Código: ", value=cod, inline=False)
         embed.add_field(name="Título: ", value=nome, inline=False)
