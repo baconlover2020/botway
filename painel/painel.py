@@ -73,11 +73,13 @@ with requests.Session() as session:
         return swf_path.split('/')[-1]
 
 
-    def criar_furnidata(classname, nome, descrição, _id=get_id()):
-            return f"<furnitype id=\"{str(_id)}\" classname=\"{classname}\">\n<revision>500008</revision> \n<defaultdir>0</defaultdir> \n<xdim>1</xdim> <ydim>1</ydim> \n<partcolors> <color>0</color> \n<color>0</color> <color>0</color> \n</partcolors> <name>{nome}</name> \n<description>{descrição}</description> \n<adurl/> <offerid>-1</offerid> <buyout>0</buyout> \n<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> \n<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> \n<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> \n"
+    def criar_furnidata(classname, nome, descrição, _id=0):
+        if _id == 0: _id = get_id()
+        return f"<furnitype id=\"{str(_id)}\" classname=\"{classname}\">\n<revision>500008</revision> \n<defaultdir>0</defaultdir> \n<xdim>1</xdim> <ydim>1</ydim> \n<partcolors> <color>0</color> \n<color>0</color> <color>0</color> \n</partcolors> <name>{nome}</name> \n<description>{descrição}</description> \n<adurl/> <offerid>-1</offerid> <buyout>0</buyout> \n<rentofferid>0</rentofferid> <rentbuyout>0</rentbuyout> \n<bc>0</bc> <excludeddynamic>0</excludeddynamic> <customparams/> <specialtype>1</specialtype> \n<canstandon>0</canstandon> <cansiton>0</cansiton> <canlayon>0</canlayon> </furnitype> \n"
 
 
-    def criar_furnidata_color(classname, nome, descrição, _id=get_id(), cor1="ffffff", cor2="ffffff"):
+    def criar_furnidata_color(classname, nome, descrição, _id=0, cor1="ffffff", cor2="ffffff"):
+        if _id == 0: _id = get_id()
         return f"<furnitype id=\"{_id}\" classname=\"{classname}\">\n<revision>56688</revision>\n<defaultdir>0</defaultdir>\n<xdim>1</xdim>\n<ydim>1</ydim>\n<partcolors>\n<color>#{cor1.strip('#')}</color>\n<color>#{cor2.strip('#')}</color>\n</partcolors>\n<name>{nome}</name>\n<description>{descrição}</description>\n<adurl/>\n<offerid>-1</offerid>\n<buyout>0</buyout>\n<rentofferid>-1</rentofferid>\n<rentbuyout>0</rentbuyout>\n<bc>1</bc>\n<excludeddynamic>0</excludeddynamic>\n<customparams>-0.25</customparams>\n<specialtype>1</specialtype>\n<canstandon>1</canstandon>\n<cansiton>0</cansiton>\n<canlayon>0</canlayon>\n</furnitype>"
 
 
