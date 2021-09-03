@@ -3,6 +3,7 @@ import discord
 from discord.ext import commands
 from permissions import is_adm, is_ceo
 from painel.painel import dar_emblema, dar_promo_points, enviar_currency
+from painel.remover_emblema import remover_emblema
 
 def setup(bot):
     bot.add_cog(Info(bot))
@@ -62,3 +63,9 @@ class Info(commands.Cog):
             await enviar_currency(user, moedas, diamantes, duckets)
             embed.add_field(name=user, value=f"Diamantes: {str(diamantes)} duckets: {str(duckets)}")
         return await ctx.message.channel.send(embed=embed) 
+
+
+    @commands.command()
+    @is_adm()
+    async def removeremblema(ctx, codigo, username):
+        return await ctx.message.channel.send(remover_emblema(username, codigo))

@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
 from painel.adicionar_emblema import hospedar_emblema
-from painel.remover_emblema import remover_emblema
 import permissions
 import config
  
@@ -85,7 +84,4 @@ class HospedarEmblema(commands.Cog):
         return 
 
 
-    @commands.command()
-    @permissions.is_adm()
-    async def removeremblema(ctx, username, codigo):
-        return await ctx.message.channel.send(remover_emblema(username, codigo))
+    
