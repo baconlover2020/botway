@@ -139,9 +139,10 @@ class HospedarEmblema(commands.Cog):
                     embed.add_field(name="Código: ", value=cod, inline=False)
                     embed.add_field(name="Título: ", value=nome, inline=False)
                     embed.add_field(name="Descrição: ", value=desc, inline=False)
-                    embed.add_field(name="Nome do evento: ", value=evento, inline=False)
-                    embed.add_field(name="Solicitado por: ", value=solicitante, inline=False)
-                    embed.add_field(name="Aprovado por: ", value=reacter.mention, inline=False)
+                    if evento:
+                        embed.add_field(name="Nome do evento: ", value=evento, inline=False)
+                        embed.add_field(name="Solicitado por: ", value=solicitante, inline=False)
+                        embed.add_field(name="Aprovado por: ", value=reacter.mention, inline=False)
                     await reaction.message.edit(embed=embed)
                 if reaction.emoji == '❌' and not reacter.id == self.bot.user.id:
                     return await reaction.message.delete()
