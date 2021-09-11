@@ -2,3 +2,4 @@ discord.py
 pillow
 requests
 bs4
+imagehash

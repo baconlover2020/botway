@@ -1,7 +1,7 @@
 dev = 'ODM4OTMwNTQ1NDg3NTExNTYz.YJCQ9A.4s-d4lMa6LPw5jXg7q1Z3Qnn4qg'
 prod = 'ODExNjI0NTIwNjE5OTE3MzQ1.YC06PA.0NvEcX1dGzvIWoW7HiL0xWFW5Lo'
 
-botToken = prod
+botToken = dev
 
 #Credenciais de login no painel
 username = 'Martinhamiguelangelo9'
@@ -28,8 +28,9 @@ age_botway = 837803727485534218
 age_emblemas = 883091460797378641
 aea_botway = 834895207069122580
 
+testway = 837802591123406858
 
-canais_emblema = [ads_emblemas, age_emblemas]
-canais_furni = [ads_mobis]
-canais_icon = [ads_icon]
-canais_buscar_mobi = [age_botway, aea_botway]
+canais_emblema = [ads_emblemas, age_emblemas, testway]
+canais_furni = [ads_mobis, testway]
+canais_icon = [ads_icon, testway]
+canais_buscar_mobi = [age_botway, aea_botway, testway]

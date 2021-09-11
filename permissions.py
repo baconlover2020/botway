@@ -25,6 +25,7 @@ def is_embaixador():
         async def predicate(ctx):
             roles = [role.name for role in ctx.message.author.roles]
             if config.ceo in roles or config.equipeSuperior in roles: return True
+            if config.staff in roles or config.adm in roles: return True
             return config.embaixador in roles
         return commands.check(predicate)
 
