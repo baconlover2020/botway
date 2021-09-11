@@ -116,7 +116,8 @@ class HospedarEmblema(commands.Cog):
                             embed.title = "⌛ Hospedando..."
                             embed.color = discord.Color.blue()
                             cod, nome, desc = embed.fields[0], embed.fields[1], embed.fields[2]
-                            cod, nome, desc = cod.value, nome.value, desc.value,
+                            cod, nome, desc = cod.value, nome.value, desc.value
+                            evento, solicitante = None, None
                             url = embed.image.url
                             await reaction.message.edit(embed=embed)
                     except:
