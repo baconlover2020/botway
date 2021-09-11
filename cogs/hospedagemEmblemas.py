@@ -36,7 +36,7 @@ class HospedarEmblema(commands.Cog):
             embed.add_field(name="Título: ", value=nome, inline=False)
             embed.add_field(name="Descrição: ", value=desc, inline=False)
             for duplicado in duplicados:
-                embed.add_field(name="Código emblema semelhante: ", value=duplicado.strip('.gif'), inline=False)
+                embed.add_field(name="Código do emblema semelhante: ", value=duplicado.strip('.gif'), inline=False)
             await msg.edit(embed=embed)
             await msg.add_reaction('✅')
             return await msg.add_reaction('❌')
@@ -83,7 +83,7 @@ class HospedarEmblema(commands.Cog):
             embed = discord.Embed(title="Existem emblemas semelhantes. Por favor utilize um emblema inédito!", color=discord.Color.red())
             embed.set_image(url=url)
             for duplicado in duplicados:
-                embed.add_field(name="Código emblema semelhante: ", value=duplicado.strip('.gif'), inline=False)
+                embed.add_field(name="Código do emblema semelhante: ", value=duplicado.strip('.gif'), inline=False)
             return await msg.edit(embed=embed)
             
         embed = discord.Embed(title="Solicitação de Emblema", color=discord.Color.gold())
